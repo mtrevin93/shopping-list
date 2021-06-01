@@ -35,4 +35,32 @@ const groceries = [
         price: 6
     }
 ]
+// console.log(groceries)
+
+const newID = () => {
+    let currentMaxID = 0
+    for (grocery of groceries) {
+        if (grocery.id > currentMaxID) {
+         currentMaxID = grocery.id
+         idNumber = currentMaxID + 1
+         
+        }
+    }
+return idNumber
+}
+
+const addToShoppingList = (itemName, itemPrice) => {
+    const newGroceryItem = {
+    id: newID(),
+    name: itemName,
+    price: itemPrice,
+    dateCreated: "June 1, 2021"
+}
+groceries.push(newGroceryItem)
+}
+addToShoppingList("Juice", 4)
+addToShoppingList("Ice Cream", 4)
+addToShoppingList("Detergent",6)
+addToShoppingList("New Pan",16)
+addToShoppingList("Watermelon",4)
 console.log(groceries)
