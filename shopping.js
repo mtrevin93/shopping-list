@@ -12,7 +12,7 @@ const groceries = [
     {
         id: 3,
         name: "Pizza rolls",
-        price: 4
+        price: 9
     },
     {
         id: 4,
@@ -60,7 +60,12 @@ groceries.push(newGroceryItem)
 }
 addToShoppingList("Juice", 4)
 addToShoppingList("Ice Cream", 4)
-addToShoppingList("Detergent",6)
+addToShoppingList("Detergent",10)
 addToShoppingList("New Pan",16)
 addToShoppingList("Watermelon",4)
-console.log(groceries)
+
+for (grocery of groceries) {
+    if (grocery.price > 8) {
+        console.log(grocery)
+    }
+}
